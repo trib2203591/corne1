@@ -12,7 +12,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        qwerty {
             display-name = "Default Layer";
 
             // -----------------------------------------------------------------------------------------
@@ -22,14 +22,14 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp SPACE  &mo 2  &kp RALT
+&kp TAB                  &kp Q  &kp W  &kp E         &kp R      &kp T           &kp Y        &kp U            &kp I            &kp O    &kp P     &kp BSPC
+&mt ESCAPE LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F      &kp G           &kp H        &kp J            &kp K            &kp L    &kp SEMI  &kp RET
+&kp LSHFT                &kp Z  &kp X  &kp C         &kp V      &kp B           &kp N        &kp M            &kp COMMA        &kp DOT  &kp FSLH  &lt 3 ESCAPE
+                                       &kp LEFT_ALT  &lt 1 TAB  &kp LEFT_GUI    &lt 2 SPACE  &lt 2 RIGHT_ALT  &kp RIGHT_SHIFT
             >;
         };
 
-        lower_layer {
+        number {
             display-name = "Lower Layer";
 
             // -----------------------------------------------------------------------------------------
@@ -46,8 +46,8 @@
             >;
         };
 
-        raise_layer {
-            display-name = "Raise Layer";
+        symbols {
+            display-name = "symbols";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BSPC |
@@ -56,10 +56,19 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp TAB     &kp GRAVE  &kp LT        &kp MINUS         &kp GREATER_THAN   &kp PIPE         &kp DOLLAR  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp SINGLE_QUOTE   &kp CARET       &kp BSPC
+&kp ESCAPE  &kp EXCL   &kp ASTERISK  &kp SLASH         &kp EQUAL          &kp AMPERSAND    &kp MINUS   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DOUBLE_QUOTES  &kp UNDERSCORE  &kp UNDERSCORE
+&kp LSHFT   &kp TILDE  &kp PLUS      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp PERCENT      &kp AT      &kp POUND             &kp COMMA              &kp DOT            &kp BACKSLASH   &kp BACKSLASH
+                                     &kp LGUI          &trans             &kp SPACE        &trans      &trans                &kp RALT
+            >;
+        };
+
+        Switch_profile {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&to 0   &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
