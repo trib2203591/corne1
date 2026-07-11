@@ -42,10 +42,10 @@
 
         Game {
             bindings = <
-&kp ESCAPE  &kp TAB           &kp Q  &kp W   &kp E  &kp R        &trans  &trans  &trans  &trans  &trans  &trans
-&kp T       &kp LEFT_SHIFT    &kp A  &kp S   &kp D  &kp F        &trans  &trans  &trans  &trans  &trans  &trans
-&kp M       &kp LEFT_CONTROL  &kp Z  &kp X   &kp C  &kp V        &trans  &trans  &trans  &trans  &trans  &trans
-                                     &trans  &mo 3  &kp SPACE    &trans  &trans  &trans
+&kp ESCAPE      &kp TAB         &kp Q  &kp W   &kp E  &kp R        &trans  &trans  &trans  &trans  &trans  &trans
+&kp TAB         &kp LCTRL       &kp A  &kp S   &kp D  &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LEFT_SHIFT  &kp Z  &kp X   &kp C  &kp V        &trans  &trans  &trans  &trans  &trans  &trans
+                                       &trans  &mo 3  &kp SPACE    &trans  &trans  &trans
             >;
 
             label = "Game";
@@ -53,10 +53,10 @@
 
         Gamming_secondary {
             bindings = <
-&trans  &kp NUMBER_6  &kp NUMBER_7  &trans        &kp NUMBER_8  &kp NUMBER_9    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans        &trans        &kp NUMBER_0    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans        &trans        &trans          &trans  &trans  &trans
+&kp TILDE  &kp NUMBER_6  &kp NUMBER_7  &trans        &kp NUMBER_8  &kp NUMBER_9    &trans  &trans  &trans  &trans  &trans  &trans
+&kp G      &trans        &trans        &trans        &trans        &kp NUMBER_0    &trans  &trans  &trans  &trans  &trans  &trans
+&kp B      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &trans  &trans  &trans  &trans  &trans  &trans
+                                       &trans        &trans        &trans          &trans  &trans  &trans
             >;
 
             label = "GameSec";
